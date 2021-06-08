@@ -1,0 +1,6 @@
+<snippet>
+    <scope>meta.command.bunch</scope>
+    <tabTrigger>disp</tabTrigger>
+    <content><![CDATA[display ${1:filename_or_url} ${2:display:${3:1}} ${4:${5:WIDTH}x${6:HEIGHT}} ${7:${8:pos_x},${9:pos_y}} ${10:#${11:background} ${12:#${13:foreground}}} ${14:alpha:${15:XX}%} ${16:level:${17:window_level}}]]></content>
+    <description>display command</description>
+</snippet>

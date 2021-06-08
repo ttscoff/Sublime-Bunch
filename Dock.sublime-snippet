@@ -1,0 +1,27 @@
+<snippet>
+    <scope>meta.command.bunch</scope>
+    <tabTrigger>dock</tabTrigger>
+    <content><![CDATA[dock ${1:left|right|bottom}]]></content>
+    <description>dock position command</description>
+</snippet>
+
+<snippet>
+    <scope>meta.command.bunch</scope>
+    <tabTrigger>desk</tabTrigger>
+    <content><![CDATA[desktop ${1:show|hide}]]></content>
+    <description>desktop command</description>
+</snippet>
+
+<snippet>
+    <scope>meta.command.bunch</scope>
+    <tabTrigger>hide</tabTrigger>
+    <content><![CDATA[hide ${1:dock|desktop}]]></content>
+    <description>dock hide command</description>
+</snippet>
+
+<snippet>
+    <scope>meta.command.bunch</scope>
+    <tabTrigger>show</tabTrigger>
+    <content><![CDATA[show ${1:dock|desktop}]]></content>
+    <description>dock show command</description>
+</snippet>

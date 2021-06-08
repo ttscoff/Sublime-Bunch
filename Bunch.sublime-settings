@@ -1,0 +1,5 @@
+{
+	"extensions": ["bunch", "bunchsnippet"],
+	"color_scheme": "Packages/Bunch/Bunch-Dark.tmTheme",
+	"tab_size": 4
+}

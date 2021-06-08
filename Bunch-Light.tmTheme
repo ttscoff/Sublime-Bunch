@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Bunch Dark</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+			  <key>background</key>
+			  <string>#fdfdfd</string>
+			  <key>caret</key>
+			  <string>#b08fbf</string>
+			  <key>foreground</key>
+			  <string>#3b4253</string>
+			  <key>invisibles</key>
+			  <string>#d8dee9</string>
+			  <key>lineHighlight</key>
+			  <string>#eccc8720</string>
+			  <key>selection</key>
+			  <string>#b58dae45</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Invalid</string>
+			<key>scope</key>
+			<string>text.bunch</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#9c202e</string>
+				<key>fontStyle</key>
+				<string>normal</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Comment</string>
+			<key>scope</key>
+			<string>comment</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#bbbbbb</string>
+				<key>fontStyle</key>
+				<string>normal</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Frontmatter</string>
+			<key>scope</key>
+			<string>frontmatter</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#b58dae</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Frontmatter Key</string>
+			<key>scope</key>
+			<string>frontmatter.key</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#80a0c2</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Snippet Divider</string>
+			<key>scope</key>
+			<string>comment.snippet.divider.bunch</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#80a0c2</string>
+				<key>background</key>
+				<string>#aaaaaa33</string>
+				<key>fontStyle</key>
+				<string>normal</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Snippet</string>
+			<key>scope</key>
+			<string>meta.snippet</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>normal</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Snippet Fragment Punctuation</string>
+			<key>scope</key>
+			<string>punctuation.definition.snippet.fragment</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#8ebcbb</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Snippet File</string>
+			<key>scope</key>
+			<string>keyword.snippet.file</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#7caf0f</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Fragment ID</string>
+			<key>scope</key>
+			<string>keyword.snippet.fragment.id</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#a2bf8a</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Fragment Name</string>
+			<key>scope</key>
+			<string>keyword.snippet.fragment.name</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#86c0d1</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Variable Name</string>
+			<key>scope</key>
+			<string>keyword.variable.name</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#87649f</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Variable Transform</string>
+			<key>scope</key>
+			<string>keyword.placeholder.transform</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#8ebcbb</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Variable Default Value</string>
+			<key>scope</key>
+			<string>keyword.placeholder.default</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#b08fbf</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Variable Punctuation</string>
+			<key>scope</key>
+			<string>punctuation.definition.placeholder</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#a2bf8a</string>
+				<key>fontStyle</key>
+				<string>normal</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Punctuation</string>
+			<key>scope</key>
+			<string>punctuation</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#8ebcbbaa</string>
+				<key>fontStyle</key>
+				<string></string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Delay</string>
+			<key>scope</key>
+			<string>punctuation.definition.delay</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffb200</string>
+				<key>fontStyle</key>
+				<string></string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Negative</string>
+			<key>scope</key>
+			<string>punctuation.definition.negation</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#9c202e</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Keyword</string>
+			<key>scope</key>
+			<string>keyword</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d2876d</string>
+				<key>fontStyle</key>
+				<string></string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>App</string>
+			<key>scope</key>
+			<string>keyword.app</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d2876d</string>
+				<key>background</key>
+				<string>#d2876d10</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>App Modifier</string>
+			<key>scope</key>
+			<string>keyword.app.modifier</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#eccc87</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Script</string>
+			<key>scope</key>
+			<string>meta.script</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#a2bf8a</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Script Operator</string>
+			<key>scope</key>
+			<string>keyword.operator.script</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#86c0d1</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Command</string>
+			<key>scope</key>
+			<string>keyword.command</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#00acda</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Command Arguments</string>
+			<key>scope</key>
+			<string>meta.command</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#80a0c2</string>
+				<key>fontStyle</key>
+				<string>normal</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Snippet Operator</string>
+			<key>scope</key>
+			<string>keyword.operator.snippet</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#a2bf8a</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>File Line</string>
+			<key>scope</key>
+			<string>meta.app.file</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#b08fbf</string>
+				<key>background</key>
+				<string>#b08fbf20</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Key Command</string>
+			<key>scope</key>
+			<string>meta.app.keycommand</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#00acda</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Keystrokes</string>
+			<key>scope</key>
+			<string>meta.app.keystroke</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#00acda</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Condition Keyword</string>
+			<key>scope</key>
+			<string>keyword.conditional</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#C74032</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Boolean</string>
+			<key>scope</key>
+			<string>keyword.boolean</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#C74032</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Condition</string>
+			<key>scope</key>
+			<string>meta.conditional.condition</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d2876d</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Query Punctuation</string>
+			<key>scope</key>
+			<string>punctuation.definition.dialog</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#87649f</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Query Dialog</string>
+			<key>scope</key>
+			<string>meta.dialog</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#b08fbf</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Query Dialog Value</string>
+			<key>scope</key>
+			<string>meta.dialog.value</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#528c9e</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Query Dialog Query</string>
+			<key>scope</key>
+			<string>meta.dialog.query</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#b58daeaa</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Embedded Snippet Divider</string>
+			<key>scope</key>
+			<string>punctuation.definition.embedded_snippet</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#00acda</string>
+				<key>background</key>
+				<string>#88888850</string>
+				<key>fontStyle</key>
+				<string></string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Embedded Snippet</string>
+			<key>scope</key>
+			<string>meta.embedded_snippet</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#99999910</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Condition Comparison</string>
+			<key>scope</key>
+			<string>keyword.conditional.comparison.bunch</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d2bb6d</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Condition Negation</string>
+			<key>scope</key>
+			<string>keywords.conditional.negation.bunch</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d2876d</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+	</array>
+	<key>uuid</key>
+	<string>BCDA1B04-2BFD-4467-A3BA-3F3E63C6BD09</string>
+</dict>
+</plist>

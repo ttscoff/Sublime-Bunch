@@ -1,0 +1,6 @@
+<snippet>
+    <scope>meta.command.bunch</scope>
+    <tabTrigger>dnd</tabTrigger>
+    <content><![CDATA[do not disturb ${1:on|off}]]></content>
+    <description>do not disturb command</description>
+</snippet>

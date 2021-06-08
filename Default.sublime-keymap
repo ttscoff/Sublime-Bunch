@@ -1,0 +1,26 @@
+[
+	{
+		"keys": ["("],
+		"command": "chained_actions",
+		"args": {
+			"actions":["insert_snippet","auto_complete"],
+			"args":[{"contents": "(${0:$SELECTION})"},{}]
+		},
+		"context": [
+			{"key": "selector", "operator": "equal", "operand": "text.bunch"},
+			{"key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*$", "match_all": true }
+		]
+	},
+	{
+		"keys": ["#"],
+		"command": "chained_actions",
+		"args": {
+			"actions":["insert_snippet","auto_complete"],
+			"args":[{"contents": "#${0:$SELECTION}"},{}]
+		},
+		"context": [
+			{"key": "selector", "operator": "equal", "operand": "keyword.snippet.file.bunch"},
+			{"key": "preceding_text", "operator": "regex_contains", "operand": "<\\S+", "match_all": true }
+		]
+	}
+]

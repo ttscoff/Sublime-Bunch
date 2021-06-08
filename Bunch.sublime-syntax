@@ -1,0 +1,223 @@
+%YAML 1.2
+---
+name: Bunch
+file_extensions:
+  - bunch
+  - bunchsnippet
+scope: text.bunch
+contexts:
+  main:
+    - include: strings
+    - include: delay
+    - include: frontmatter
+    - include: embedded
+    - include: placeholder
+    - include: script
+    - include: fragment_id
+    - include: snippet
+    - include: condition
+    - include: assignment
+    - include: comment
+    - include: dialog
+    - include: app
+    - include: file
+    - include: command
+  embedded:
+    - match: ^_{3,}\s*$
+      scope: punctuation.definition.embedded_snippet.bunch
+      push:
+        - meta_scope: meta.embedded_snippet.bunch
+        - match: (?i:s).*\Z
+          pop: true
+        - include: main
+  app:
+    - match: (!!?)?([|@%]*)([\w@].*?)([_\^])?$
+      scope: keyword.app.bunch
+      captures:
+        1: punctuation.definition.negation.bunch
+        2: keyword.app.modifier.bunch
+        4: keyword.app.modifier.bunch
+  fragment_id:
+    - match: '^((?:-{2,}|[=>#])[\-=># ]*)(\[)([^\]]+)(\])(.*\s*$)'
+      captures:
+        1: comment.snippet.divider.bunch
+        2: comment.snippet.divider.bunch punctuation.definition.snippet.fragment.bunch
+        3: keyword.snippet.fragment.id.bunch
+        4: comment.snippet.divider.bunch punctuation.definition.snippet.fragment.bunch
+        5: comment.snippet.divider.bunch
+  frontmatter:
+    - match: '^-{3,}\s*$'
+      scope: punctuation.definition.frontmatter.bunch
+      push:
+        - meta_scope: 'frontmatter.bunch'
+        - include: comment
+        - match: '^-{3,}\s*$'
+          scope: punctuation.definition.frontmatter.bunch
+          pop: true
+        - include: frontmatter_key
+        - include: strings
+  delay:
+    - match: '~\d+'
+      scope: punctuation.definition.delay.bunch
+  file:
+    - match: (^|\n|\s+)(-(?=[^\-])\s*)
+      captures:
+        2: punctuation.definition.file.bunch
+      push:
+        - meta_scope: meta.app.file.bunch
+        - match: $
+          pop: true
+        - match: (\{)(.*?)(\})
+          captures:
+            1: punctuation.definition.keycommand.bunch
+            2: meta.app.keycommand.bunch
+            3: punctuation.definition.keycommand.bunch
+        - match: (\[)(.*?)(\])
+          captures:
+            1: punctuation.definition.keycommand.bunch
+            2: meta.app.keystroke.bunch
+            3: punctuation.definition.keycommand.bunch
+        - include: placeholder
+        - include: command
+        - include: assignment
+  condition:
+    - match: '^(?: {4}|\t)*((?:else )?if|else|end)'
+      scope: conditional.bunch
+      captures:
+        1: keyword.conditional.bunch
+      push:
+        - meta_scope: meta.conditional.condition.bunch
+        - match: $
+          pop: true
+        - include: comparisons
+        - include: bool
+        - include: strings
+  comparisons:
+    - match: \b(weekday|time)\b
+      scope: keyword.boolean.bunch
+    - match: ((not )?(has|is)?\s*(not|!)?\s*(parent|child)|(not )?(is|does)( not)?( (running|before|after|open(ing)?|clos(ing|ed)))?|(not|!)|(starts?|begins?|ends?) with|contains?|(less|greater)( than)?( or equals?( to)?)?|equals?( to)?|[!\^\$\*<=>]+|(yes|no|true|false))
+      scope: keyword.conditional.comparison.bunch
+    - match: (is )?NOT
+      scope: keywords.conditional.negation.bunch
+  command:
+    - match: '^(?: {4}|\t)*(!!?)?(\()'
+      captures:
+        1: punctuation.definition.negation.bunch
+        2: punctuation.definition.command.bunch
+      push:
+        - meta_scope: meta.command.bunch
+        - match: '(display|dark mode on|dark mode off|dark mode|light mode|do not disturb on|do not disturb off|do not disturb|dnd on|dnd off|dnd|hide dock|dock hide|show dock|dock show|dock left|dock right|dock bottom|dock|desktop show|desktop hide|hide desktop|show desktop|desktop|wallpaper|screen|audio input|audio output|audio|notify|sleep|awake|log|input source)'
+          scope: keyword.command.bunch
+        - match: \)
+          scope: punctuation.definition.command.bunch
+          pop: true
+        - include: placeholder
+  comment:
+    - match: '(?: |^)(#+|/{2,})([^\[].*?)$'
+      scope: comment.bunch
+    - match: '/\*+'
+      scope: comment.bunch
+      push:
+        - meta_scope: comment.punctuation.bunch
+        - match: '\*+/'
+          scope: comment.punctuation.bunch
+          pop: true
+  frontmatter_key:
+    - match: '^(\S[\w ]+)(:)\s*(.*?)$'
+      captures:
+        1: frontmatter.key.bunch
+        2: punctuation.definition.bold
+        3: frontmatter.value.bunch
+  bool:
+    - match: (AND|OR|NOT)
+      scope: keyword.boolean.bunch
+  snippet:
+    - match: (?:\s*)(!!?)?(<)
+      captures:
+        1: punctuation.definition.negation.bunch
+        2: keyword.operator.snippet.bunch
+      push:
+        - meta_scope: meta.snippet.bunch
+        - include: delay
+        - include: comment
+        - match: '[^#?]+(?=#|//|\?|$)'
+          scope: keyword.snippet.file.bunch
+        - match: '$'
+          pop: true
+        - match: '\?"(.*?)"'
+          scope: meta.dialog.query.bunch
+        - match: '(?<=\S|^)(#)(.*?)\s*(?=[~#?]|//|$)'
+          scope: meta.snippet.fragment.bunch
+          captures:
+            1: punctuation.definition.snippet.fragment.bunch
+            2: keyword.snippet.fragment.name.bunch
+  dialog:
+    - match: (\?")(.*?)(")
+      captures:
+        1: punctuation.definition.dialog.bunch
+        2: meta.dialog.bunch
+        3: punctuation.definition.dialog.bunch
+    - match: '\?[{\[]'
+      scope: punctuation.definition.dialog.bunch
+      push:
+        - meta_scope: meta.dialog.bunch
+        - include: placeholder
+        - match: '([\}\]])\s*(".*?")?'
+          captures:
+            1: punctuation.definition.dialog.bunch
+            2: meta.dialog.query.bunch
+          pop: true
+        - match: ','
+          scope: punctuation.definition
+        - match: '\s*=>\s*'
+          scope: punctuation.definition.dialog.bunch
+          push:
+            - include: snippet
+            - match: '(.*)(?=$|,)'
+              scope: meta.dialog.value.bunch
+            - match: '(,|$)'
+              pop: true
+  assignment:
+    - match: '(?!-|#|//)(\S.*?)(?=\s*=)'
+      captures:
+        1: keyword.variable.name.bunch
+      push:
+        - meta_scope: keyword.variable.bunch
+        - match: '(?=\n)'
+          pop: true
+        - match: '\s*(=)\s*'
+          captures:
+            1: punctuation.definition.variable.bunch
+        - include: script
+        - include: dialog
+        - match: '(.*?)'
+          scope: meta.variable.value.bunch
+  placeholder:
+    - match: '([\$%]\{)'
+      scope: punctuation.definition.placeholder.bunch
+      push:
+        - meta_scope: keyword.placeholder.bunch
+        - match: '\}'
+          scope: punctuation.definition.placeholder.bunch
+          pop: true
+        - match: '/'
+          scope: punctuation.definition.placeholder.transform.bunch
+        - match: ':'
+          scope: punctuation.definition.placeholder.default.bunch
+        - match: '(?<=/)([^:}]+)'
+          scope: keyword.placeholder.transform.bunch
+        - match: '(?<=:)([^/}]+)'
+          scope: keyword.placeholder.default.bunch
+        - match: '[^/:}]+'
+          scope: keyword.variable.name.bunch
+  script:
+    - match: '(!!?)?([*$&])\s+(.*?)$'
+      captures:
+        1: punctuation.definition.negation.bunch
+        2: keyword.operator.script.bunch
+        3: meta.script.bunch
+  strings:
+    - match: '"(.*?)"'
+      scope: string.quoted.double
+    - match: \'.*?\'
+      scope: string.quoted.single

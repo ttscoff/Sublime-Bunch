@@ -1,0 +1,6 @@
+<snippet>
+    <scope>meta.command.bunch</scope>
+    <tabTrigger>aud</tabTrigger>
+    <content><![CDATA[audio ${1:input|output} ${2:device_name|volume X|mute|unmute}]]></content>
+    <description>audio command</description>
+</snippet>

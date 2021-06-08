@@ -1,4 +1,4 @@
-A Sublime Text package for Bunch.app
+A Sublime Text package for Bunch.app on macOS.
 
 - Syntax highlighting for Bunch files and Snippets
 - Light and Dark themes

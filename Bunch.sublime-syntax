@@ -5,6 +5,7 @@ file_extensions:
   - bunch
   - bunchsnippet
 scope: text.bunch
+extends: Packages/Ruby/Ruby.sublime-syntax
 contexts:
   main:
     - include: strings
@@ -169,8 +170,10 @@ contexts:
           pop: true
         - match: ','
           scope: punctuation.definition
-        - match: '\s*=>\s*'
-          scope: punctuation.definition.dialog.bunch
+        - match: '(\S.*?)\s*(=>)\s*'
+          captures:
+            1: meta.dialog.option.bunch
+            2: punctuation.definition.dialog.bunch
           push:
             - include: snippet
             - match: '(.*)(?=$|,)'

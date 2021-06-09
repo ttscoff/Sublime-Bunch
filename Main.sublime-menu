@@ -1,35 +1,25 @@
 [
     {
-        "caption": "Preferences",
-        "mnemonic": "n",
         "id": "preferences",
-        "children":
-        [
+        "children": [
+        {
+            "id": "package-settings",
+            "children": [
             {
-                "caption": "Package Settings",
-                "mnemonic": "P",
-                "id": "package-settings",
-                "children":
-                [
-                    {
-                        "caption": "Bunch",
-                        "children":
-                        [
-                            {
-                                "command": "open_file", 
-                                "args": {"file": "${packages}/Bunch/Bunch.sublime-settings"},
-                                "caption": "Settings – Default"
-                            },
-                            {
-                                "command": "open_file", 
-                                "args": {"file": "${packages}/User/Preferences.sublime-settings"},
-                                "caption": "Settings – User"
-                            },
-                            { "caption": "-" }
-                        ]
+                "caption": "Bunch",
+                "children": [
+                {
+                    "caption": "Settings",
+                    "command": "edit_settings",
+                    "args": {
+                        "base_file": "${packages}/Bunch/Bunch.sublime-settings",
+                        "default": "{\n\t$0\n}\n"
                     }
-                ]
-            }
-        ]
+                },
+                {
+                    "caption": "-"
+                }]
+            }]
+        }]
     }
 ]

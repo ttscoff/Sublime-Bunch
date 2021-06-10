@@ -1,5 +1,5 @@
 <snippet>
-    <scope>meta.command.bunch</scope>
+    <scope>meta.function-call.command.bunch</scope>
     <tabTrigger>audio</tabTrigger>
     <content><![CDATA[audio ${1:input|output} ${2:device_name|volume X|mute|unmute}]]></content>
     <description>audio command</description>

@@ -1,5 +1,5 @@
 {
-    "scope": "text.bunch meta.command.bunch",
+    "scope": "source.bunch meta.function-call.command.bunch",
 
     "completions": [
         "display",

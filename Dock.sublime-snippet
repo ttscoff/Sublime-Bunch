@@ -1,5 +1,5 @@
 <snippet>
-    <scope>meta.command.bunch</scope>
+    <scope>meta.function-call.command.bunch</scope>
     <tabTrigger>dock</tabTrigger>
     <content><![CDATA[dock ${1:left|right|bottom}]]></content>
     <description>dock position command</description>

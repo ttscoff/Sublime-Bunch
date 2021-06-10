@@ -5,7 +5,7 @@
    <key>name</key>
    <string>Miscellaneous</string>
    <key>scope</key>
-   <string>text.bunch</string>
+   <string>source.bunch</string>
    <key>settings</key>
    <dict>
       <key>shellVariables</key>

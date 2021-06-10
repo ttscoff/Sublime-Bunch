@@ -28,7 +28,7 @@
 			<key>name</key>
 			<string>Invalid</string>
 			<key>scope</key>
-			<string>text.bunch</string>
+			<string>source.bunch</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -46,7 +46,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#bbbbbb</string>
+				<string>#d8dee9</string>
 				<key>fontStyle</key>
 				<string>normal</string>
 			</dict>
@@ -56,7 +56,7 @@
 			<key>name</key>
 			<string>Frontmatter</string>
 			<key>scope</key>
-			<string>frontmatter</string>
+			<string>meta.frontmatter</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -70,13 +70,41 @@
 			<key>name</key>
 			<string>Frontmatter Key</string>
 			<key>scope</key>
-			<string>frontmatter.key</string>
+			<string>variable.key.frontmatter</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#80a0c2</string>
 				<key>fontStyle</key>
 				<string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Comment Divider</string>
+			<key>scope</key>
+			<string>comment.line.snippet.divider.bunch</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#80a0c2</string>
+				<key>fontStyle</key>
+				<string>normal</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Snippet File</string>
+			<key>scope</key>
+			<string>entity.name.file</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#7caf0f</string>
+				<key>fontStyle</key>
+				<string>bold</string>
 			</dict>
 		</dict>
 
@@ -112,39 +140,26 @@
 			<key>name</key>
 			<string>Snippet Fragment Punctuation</string>
 			<key>scope</key>
-			<string>punctuation.definition.snippet.fragment</string>
+			<string>punctuation.accessor.fragment.bunch</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#8ebcbb</string>
+				<string>#8ebcbbaa</string>
 				<key>fontStyle</key>
 				<string>bold</string>
 			</dict>
 		</dict>
 
-		<dict>
-			<key>name</key>
-			<string>Snippet File</string>
-			<key>scope</key>
-			<string>keyword.snippet.file</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#7caf0f</string>
-				<key>fontStyle</key>
-				<string>bold</string>
-			</dict>
-		</dict>
 
 		<dict>
 			<key>name</key>
 			<string>Fragment ID</string>
 			<key>scope</key>
-			<string>keyword.snippet.fragment.id</string>
+			<string>entity.name.section.bunch</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#a2bf8a</string>
+				<string>#86c0d1</string>
 				<key>fontStyle</key>
 				<string>italic</string>
 			</dict>
@@ -154,7 +169,7 @@
 			<key>name</key>
 			<string>Fragment Name</string>
 			<key>scope</key>
-			<string>keyword.snippet.fragment.name</string>
+			<string>keyword.fragment.id</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -168,11 +183,11 @@
 			<key>name</key>
 			<string>Variable Name</string>
 			<key>scope</key>
-			<string>keyword.variable.name</string>
+			<string>variable.other</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#87649f</string>
+				<string>#00acda</string>
 				<key>fontStyle</key>
 				<string>italic</string>
 			</dict>
@@ -182,7 +197,7 @@
 			<key>name</key>
 			<string>Variable Transform</string>
 			<key>scope</key>
-			<string>keyword.placeholder.transform</string>
+			<string>string.quoted.single.transform.bunch</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -196,7 +211,7 @@
 			<key>name</key>
 			<string>Variable Default Value</string>
 			<key>scope</key>
-			<string>keyword.placeholder.default</string>
+			<string>string.quoted.single.default.bunch</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -210,7 +225,7 @@
 			<key>name</key>
 			<string>Variable Punctuation</string>
 			<key>scope</key>
-			<string>punctuation.definition.placeholder</string>
+			<string>punctuation.definition.variable.placeholder.bunch</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -236,6 +251,36 @@
 
 		<dict>
 			<key>name</key>
+			<string>Embedded Snippet Divider</string>
+			<key>scope</key>
+			<string>punctuation.definition.embedded_snippet</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#00acda</string>
+				<key>background</key>
+				<string>#88888850</string>
+				<key>fontStyle</key>
+				<string></string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>App Modifier</string>
+			<key>scope</key>
+			<string>entity.name.function.app.bunch punctuation.definition.variable.modifier.bunch</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#eccc87</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
 			<string>Delay</string>
 			<key>scope</key>
 			<string>punctuation.definition.delay</string>
@@ -252,7 +297,7 @@
 			<key>name</key>
 			<string>Negative</string>
 			<key>scope</key>
-			<string>punctuation.definition.negation</string>
+			<string>punctuation.definition.variable.negation</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -278,27 +323,11 @@
 			<key>name</key>
 			<string>App</string>
 			<key>scope</key>
-			<string>keyword.app</string>
+			<string>entity.name.function.app</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#d2876d</string>
-				<key>background</key>
-				<string>#d2876d10</string>
-				<key>fontStyle</key>
-				<string>bold</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>App Modifier</string>
-			<key>scope</key>
-			<string>keyword.app.modifier</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#eccc87</string>
 				<key>fontStyle</key>
 				<string>bold</string>
 			</dict>
@@ -320,7 +349,7 @@
 			<key>name</key>
 			<string>Script Operator</string>
 			<key>scope</key>
-			<string>keyword.operator.script</string>
+			<string>meta.script punctuation.definition.variable</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -332,7 +361,7 @@
 			<key>name</key>
 			<string>Command</string>
 			<key>scope</key>
-			<string>keyword.command</string>
+			<string>meta.function-call.command</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -346,25 +375,13 @@
 			<key>name</key>
 			<string>Command Arguments</string>
 			<key>scope</key>
-			<string>meta.command</string>
+			<string>variable.parameter</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#80a0c2</string>
 				<key>fontStyle</key>
 				<string>normal</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Snippet Operator</string>
-			<key>scope</key>
-			<string>keyword.operator.snippet</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#a2bf8a</string>
 			</dict>
 		</dict>
 
@@ -378,7 +395,19 @@
 				<key>foreground</key>
 				<string>#b08fbf</string>
 				<key>background</key>
-				<string>#b08fbf20</string>
+				<string>#b08fbf10</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Snippet Operator</string>
+			<key>scope</key>
+			<string>meta.snippet punctuation.definition.generic</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#a2bf8a</string>
 			</dict>
 		</dict>
 
@@ -386,7 +415,7 @@
 			<key>name</key>
 			<string>Key Command</string>
 			<key>scope</key>
-			<string>meta.app.keycommand</string>
+			<string>string.quoted.double.keycommand</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -398,7 +427,7 @@
 			<key>name</key>
 			<string>Keystrokes</string>
 			<key>scope</key>
-			<string>meta.app.keystroke</string>
+			<string>string.quoted.double.keystroke</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -410,11 +439,11 @@
 			<key>name</key>
 			<string>Condition Keyword</string>
 			<key>scope</key>
-			<string>keyword.conditional</string>
+			<string>keyword.control.conditional.bunch</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#C74032</string>
+				<string>#d2876d</string>
 			</dict>
 		</dict>
 
@@ -422,11 +451,11 @@
 			<key>name</key>
 			<string>Boolean</string>
 			<key>scope</key>
-			<string>keyword.boolean</string>
+			<string>keyword.operator.word</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#C74032</string>
+				<string>#d2876d</string>
 			</dict>
 		</dict>
 
@@ -438,7 +467,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#d2876d</string>
+				<string>#b58dae</string>
 			</dict>
 		</dict>
 
@@ -446,7 +475,7 @@
 			<key>name</key>
 			<string>Query Punctuation</string>
 			<key>scope</key>
-			<string>punctuation.definition.dialog</string>
+			<string>meta.dialog punctuation</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -458,7 +487,7 @@
 			<key>name</key>
 			<string>Query Dialog</string>
 			<key>scope</key>
-			<string>meta.dialog</string>
+			<string>meta.dialog.query string</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -489,34 +518,6 @@
 				<string>#b58daeaa</string>
 				<key>fontStyle</key>
 				<string>italic</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Embedded Snippet Divider</string>
-			<key>scope</key>
-			<string>punctuation.definition.embedded_snippet</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#00acda</string>
-				<key>background</key>
-				<string>#88888850</string>
-				<key>fontStyle</key>
-				<string></string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Embedded Snippet</string>
-			<key>scope</key>
-			<string>meta.embedded_snippet</string>
-			<key>settings</key>
-			<dict>
-				<key>background</key>
-				<string>#99999910</string>
 			</dict>
 		</dict>
 

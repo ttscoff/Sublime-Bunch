@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Symbol List: Fragment</string>
 	<key>scope</key>
-	<string>keyword.snippet.fragment.id, frontmatter.bunch, punctuation.definition.embedded_snippet.bunch</string>
+	<string>meta.frontmatter.bunch, meta.embedded_snippet.bunch keyword.fragment.id.bunch, punctuation.definition.embedded_snippet.bunch</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>

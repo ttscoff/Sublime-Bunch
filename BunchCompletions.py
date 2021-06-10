@@ -9,7 +9,7 @@ import operator
 class AppCompletions(sublime_plugin.EventListener):
 
     def on_query_completions(self, view, prefix, locations):
-        if not view.match_selector(locations[0], "keyword.app.bunch"):
+        if not view.match_selector(locations[0], "entity.name.function.app.bunch"):
             return []
 
         def trim_App(iter_in):
@@ -28,7 +28,7 @@ class AppCompletions(sublime_plugin.EventListener):
             if comp.lower().startswith(prefix):
                 out.append(comp)
 
-        return out
+        return (out, sublime.INHIBIT_WORD_COMPLETIONS | sublime.INHIBIT_EXPLICIT_COMPLETIONS)
 
 class ChainedActionsCommand(sublime_plugin.TextCommand):
     def run(self, edit, actions, args):
@@ -50,8 +50,10 @@ def getFragmentIds(view, name=''):
 class SnippetFragmentCompletions(sublime_plugin.EventListener):
 
     def on_query_completions(self, view, prefix, locations):
-        if not view.match_selector(locations[0], "meta.snippet.fragment"):
+        if not view.match_selector(locations[0], "meta.snippet.fragment.bunch"):
             return []
+
+        print(prefix)
 
         available_completions = getFragmentIds(view)
 
@@ -62,4 +64,4 @@ class SnippetFragmentCompletions(sublime_plugin.EventListener):
             if comp.lower().startswith(prefix):
                 out.append(comp)
 
-        return out
+        return (out, sublime.INHIBIT_WORD_COMPLETIONS | sublime.INHIBIT_EXPLICIT_COMPLETIONS)

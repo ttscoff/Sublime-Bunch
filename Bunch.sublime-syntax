@@ -65,7 +65,7 @@ contexts:
       push:
         - meta_scope: meta.function-call.command.bunch
         - match: '(display|dark mode on|dark mode off|dark mode|light mode|do not disturb on|do not disturb off|do not disturb|dnd on|dnd off|dnd|hide dock|dock hide|show dock|dock show|dock left|dock right|dock bottom|dock|desktop show|desktop hide|hide desktop|show desktop|desktop|wallpaper|screen|audio input|audio output|audio|notify|sleep|awake|log|input source)'
-          scope: constant.language.command.bunch
+          scope: support.function.command.bunch
         - match: '[^\)]+'
           scope: variable.parameter.bunch
         - match: \)
@@ -288,6 +288,6 @@ contexts:
 
   strings:
     - match: '"(.*?)"'
-      scope: string.quoted.double
+      scope: string.quoted.double.bunch
     - match: \'.*?\'
-      scope: string.quoted.single
+      scope: string.quoted.single.bunch

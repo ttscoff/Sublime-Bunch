@@ -1,0 +1,6 @@
+<snippet>
+    <scope>meta.function-call.command.bunch</scope>
+    <tabTrigger>show</tabTrigger>
+    <content><![CDATA[show ${1:dock|desktop}]]></content>
+    <description>dock show command</description>
+</snippet>

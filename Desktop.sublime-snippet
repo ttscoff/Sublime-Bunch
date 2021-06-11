@@ -1,0 +1,6 @@
+<snippet>
+    <scope>meta.function-call.command.bunch</scope>
+    <tabTrigger>desktop</tabTrigger>
+    <content><![CDATA[desktop ${1:show|hide}]]></content>
+    <description>desktop command</description>
+</snippet>

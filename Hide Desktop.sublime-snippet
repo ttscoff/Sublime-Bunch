@@ -1,0 +1,6 @@
+<snippet>
+    <scope>meta.command.bunch</scope>
+    <tabTrigger>hide</tabTrigger>
+    <content><![CDATA[hide ${1:dock|desktop}]]></content>
+    <description>dock hide command</description>
+</snippet>

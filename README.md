@@ -17,11 +17,11 @@ This package comes with a light and dark theme for Bunch files built in. If you 
 
 ```
 {
-    "color_scheme": "Packages/Bunch/Bunch-Dark.tmTheme"
+    "color_scheme": "Packages/Bunch/Bunch-Dark.sublime-color-theme"
 }
 ```
 
-(Or `Bunch-Light.tmTheme` for the light version.)
+(Or `Bunch-Light.sublime-color-theme` for the light version.)
 
 ### Completing App Names
 

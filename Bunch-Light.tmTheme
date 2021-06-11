@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Bunch Dark</string>
+	<string>Bunch Light</string>
 	<key>settings</key>
 	<array>
 		<dict>
@@ -550,6 +550,6 @@
 		</dict>
 	</array>
 	<key>uuid</key>
-	<string>BCDA1B04-2BFD-4467-A3BA-3F3E63C6BD09</string>
+	<string>D13D3A85-1B94-49EF-BC79-6E30D0404EDB</string>
 </dict>
 </plist>

@@ -94,7 +94,7 @@ contexts:
   comparisons:
     - match: \b(weekday|time)\b
       scope: keyword.operator.word.bunch
-    - match: ((not )?(has|is)?\s*(not|!)?\s*(parent|child)|(not )?(is|does)( not)?( (running|before|after|open(ing)?|clos(ing|ed)))?|(not|!)|(starts?|begins?|ends?) with|contains?|(less|greater)( than)?( or equals?( to)?)?|equals?( to)?|[!\^\$\*<=>]+|(yes|no|true|false))
+    - match: \b((not )?(has|is)?\s*(not|!)?\s*(parent|child)|(not )?(is|does)( not)?( (running|before|after|open(ing)?|clos(ing|ed)))?|(not|!)|(starts?|begins?|ends?) with|contains?|(less|greater)( than)?( or equals?( to)?)?|equals?( to)?|[!\^\$\*<=>]+|(yes|no|true|false))\b
       scope: keyword.control.comparison.bunch
     - match: (is )?NOT
       scope: keyword.operator.word.bunch

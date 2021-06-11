@@ -1,4 +1,8 @@
 {
 	"extensions": ["bunch", "bunchsnippet", "frontmatter"],
-	"tab_size": 4
+	"tab_size": 4,
+	// App completions can slow down typing other things,
+	// manually invoke it when needed.
+	// Only autocomplete in commands
+	"auto_complete_selector": "meta.function-call.command.bunch"
 }

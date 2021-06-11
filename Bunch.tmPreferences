@@ -3,11 +3,15 @@
 <plist version="1.0">
 <dict>
    <key>name</key>
-   <string>Miscellaneous</string>
+   <string>Bunch</string>
    <key>scope</key>
    <string>source.bunch</string>
    <key>settings</key>
    <dict>
+      <key>increaseIndentPattern</key>
+      <string>^\s*\b(if|else)\b.*?$</string>
+      <key>decreaseIndentPattern</key>
+      <string>^\s*(end|else.*?)$</string>
       <key>shellVariables</key>
       <array>
          <dict>

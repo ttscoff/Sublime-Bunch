@@ -21,6 +21,8 @@
         "dock right",
         "dock bottom",
         "dock",
+        "hide menu bar",
+        "show menu bar",
         "desktop show",
         "desktop hide",
         "hide desktop",

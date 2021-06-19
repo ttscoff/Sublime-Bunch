@@ -17,6 +17,14 @@
                     }
                 },
                 {
+                    "caption": "Key Bindings",
+                    "command": "edit_settings",
+                    "args": {
+                        "base_file": "${packages}/Bunch/Default (OSX).sublime-keymap",
+                        "default": "[\n\t$0\n]\n"
+                    }
+                },
+                {
                     "caption": "-"
                 }]
             }]

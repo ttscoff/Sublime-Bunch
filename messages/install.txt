@@ -1,0 +1,11 @@
+---------
+Bunch.app
+---------
+Thanks for installing the Bunch Sublime package!
+
+By default the built-in themes and available key bindings are disabled and must be enabled by you, if you choose to use them. See the README for details:
+
+https://github.com/ttscoff/Sublime-Bunch/blob/develop/README.md
+
+
+

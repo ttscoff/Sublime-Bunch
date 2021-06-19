@@ -1,0 +1,12 @@
+---------
+Bunch.app
+---------
+
+v1.1.5:
+
+- Add example keymaps for file item continuation
+- Add example keymaps for app/fragment completions
+- Update README
+- Add show/hide menu bar to command completions
+- Add show/hide menu bar to syntax definition
+- Add triple negative (!!!) for apps to syntax definition

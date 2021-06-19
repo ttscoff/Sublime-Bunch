@@ -1,0 +1,54 @@
+[
+	// // Bunch Key Bindings
+	// Start file lists
+    // { "keys": ["enter"], "command": "insert_snippet", "args": {"contents": "\n- "}, "context":
+    //     [
+    //         { "key": "selector", "operator": "equal", "operand": "entity.name.function.app.bunch", "match_all": true },
+    //         { "key": "preceding_text", "operator": "regex_contains", "operand": "^(\\s*(!!)?[@%]?)\\S.*", "match_all": true },
+    //         { "key": "auto_complete_visible", "operator": "equal", "operand": false }
+    //     ]
+    // },
+    // // Extend file lists
+    // { "keys": ["enter"], "command": "insert_snippet", "args": {"contents": "\n- "}, "context":
+    //     [
+    //         { "key": "selector", "operator": "equal", "operand": "source.bunch", "match_all": true },
+    //         { "key": "preceding_text", "operator": "regex_contains", "operand": "^(\\s*(-)\\s+)\\S.*", "match_all": true },
+    //         { "key": "auto_complete_visible", "operator": "equal", "operand": false }
+    //     ]
+    // },
+    // // Remove empty file item
+    // { "keys": ["enter"], "command": "run_macro_file", "args": {"file": "Packages/Bunch/macros/Remove Empty File Item.sublime-macro"}, "context":
+    //     [
+    //         { "key": "selector", "operator": "equal", "operand": "source.bunch", "match_all": true },
+    //         { "key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*-\\s*$", "match_all": true },
+    //         { "key": "following_text", "operator": "regex_contains", "operand": "^\\s*$", "match_all": true },
+    //         { "key": "auto_complete_visible", "operator": "equal", "operand": false }
+    //     ]
+    // },
+	// // Auto complete commands when entering parens
+	// {
+	//     "keys": ["("],
+	//     "command": "chained_actions",
+	//     "args": {
+	//         "actions":["insert_snippet","auto_complete"],
+	//         "args":[{"contents": "(${0:$SELECTION})"},{}]
+	//     },
+	//     "context": [
+	//         {"key": "selector", "operator": "equal", "operand": "text.bunch"},
+	//         {"key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*$", "match_all": true }
+	//     ]
+	// },
+	// // Auto complete fragment ids from embedded snippets
+	// {
+	//     "keys": ["#"],
+	//     "command": "chained_actions",
+	//     "args": {
+	//         "actions":["insert_snippet","auto_complete"],
+	//         "args":[{"contents": "#${0:$SELECTION}"},{}]
+	//     },
+	//     "context": [
+	//         {"key": "selector", "operator": "equal", "operand": "entity.name.file.bunch"},
+	//         {"key": "preceding_text", "operator": "regex_contains", "operand": "<\\S+", "match_all": true }
+	//     ]
+	// }
+]

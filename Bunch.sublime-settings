@@ -1,4 +1,5 @@
 {
+	// "color_scheme": "Packages/Bunch/Bunch-Dark.sublime-color-scheme",
 	"extensions": ["bunch", "bunchsnippet", "frontmatter"],
 	"tab_size": 4,
 	// App completions can slow down typing other things,

@@ -121,6 +121,21 @@ contexts:
         1: punctuation.definition.string.begin.bunch
         2: string.quoted.double.dialog.bunch
         3: punctuation.definition.string.end.bunch
+    - match: '\?<'
+      scope: punctuation.section.block.begin.bunch
+      push:
+        - meta_scope: meta.dialog.file.bunch
+        - include: placeholder
+        - match: '\s*((")(.*?)("))'
+          captures:
+            1: meta.dialog.query.bunch
+            2: punctuation.definition.string.begin.bunch
+            3: string.quoted.double.dialog.bunch
+            4: punctuation.definition.string.end.bunch
+        - match: '.*?(?="|$)'
+          scope: meta.script.bunch
+        - match: '$'
+          pop: 1
     - match: '\?{'
       scope: punctuation.section.block.begin.bunch
       push:
@@ -146,7 +161,7 @@ contexts:
             - include: snippet
             - match: (?!,|\n|\}).*?
               scope: variable.parameter.bunch
-            - match: '(?=,|\n|$)'
+            - match: '(?=,|\n|\}|$)'
               pop: 1
     - match: '\?\['
       scope: punctuation.section.block.begin.bunch

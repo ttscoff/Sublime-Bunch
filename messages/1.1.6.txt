@@ -1,0 +1,7 @@
+---------
+Bunch.app
+---------
+
+v1.1.6:
+
+- Add handling for new ?< FILE dialog type

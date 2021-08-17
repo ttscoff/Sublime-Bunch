@@ -38,16 +38,14 @@ contexts:
           pop: 1
 
   assignment:
-    - match: '(?!-|#|//)(\S.*?)(?=\s*=[^>])'
+    - match: '(?!-|#|//)(\S.*?)\s*(=)\s*(?=[^>])'
       captures:
         1: variable.other.bunch
+        2: punctuation.definition.variable.bunch
       push:
         - meta_scope: meta.variable.other.bunch
         - match: '(?=\n)'
           pop: 1
-        - match: '\s*(=)\s*'
-          captures:
-            1: punctuation.definition.variable.bunch
         - include: script
         - include: dialog
         - match: '(.*?)'
@@ -60,7 +58,7 @@ contexts:
   command:
     - match: '^(?: {4}|\t)*(!!?)?(\()'
       captures:
-        1: punctuation.definition.negation.bunch
+        1: punctuation.definition.variable.negation.bunch
         2: punctuation.section.parens.begin.bunch
       push:
         - meta_scope: meta.function-call.command.bunch
@@ -116,11 +114,16 @@ contexts:
       scope: punctuation.definition.delay.bunch
 
   dialog:
-    - match: (\?")(.*?)(")
-      captures:
-        1: punctuation.definition.string.begin.bunch
-        2: string.quoted.double.dialog.bunch
-        3: punctuation.definition.string.end.bunch
+    - match: (\?")
+      scope: punctuation.section.block.begin.bunch
+      push:
+        - meta_scope: meta.dialog.query.bunch
+        - include: placeholder
+        - match: (?!"|$).*?
+          scope: string.quoted.double.dialog.bunch
+        - match: \"
+          scope: punctuation.section.block.end.bunch
+          pop: 1
     - match: '\?<'
       scope: punctuation.section.block.begin.bunch
       push:
@@ -266,7 +269,7 @@ contexts:
     - match: '(!!?)?([*$&])\s+(.*?)$'
       scope: meta.script.bunch
       captures:
-        1: punctuation.definition.negation.bunch
+        1: punctuation.definition.variable.negation.bunch
         2: punctuation.definition.variable.bunch
         3: string.quoted.single.script.bunch
 

@@ -181,7 +181,13 @@
             "name": "File Line", 
             "background": "#b08fbf10",
             "foreground": "#b08fbf"
-        }, 
+        },
+        {
+            "scope": "meta.variable.other string.quoted.single",
+            "name": "Variable Assignment",
+            "background": "#b08fbf10",
+            "foreground": "#b08fbf"
+        },
         {
             "scope": "meta.snippet punctuation.definition.generic", 
             "name": "Snippet Operator", 

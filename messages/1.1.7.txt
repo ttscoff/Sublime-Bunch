@@ -1,0 +1,8 @@
+---------
+Bunch.app
+---------
+
+v1.1.7:
+
+- Fix text query (`?"QUERY"`) highlight
+- Clean up variable assignment highlight

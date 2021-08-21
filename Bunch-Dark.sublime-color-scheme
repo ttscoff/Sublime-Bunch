@@ -160,14 +160,15 @@
             "foreground": "#a2bf8a"
         }, 
         {
-            "scope": "meta.script punctuation.definition.variable", 
+            "scope": "punctuation.definition.variable",
             "name": "Script Operator", 
             "foreground": "#86c0d1"
         }, 
         {
             "scope": "punctuation.definition.heredoc.bunch",
-            "font_style": "bold",
-            "foreground": "#00acda99"
+            "font_style": "italic",
+            "background": "#86c0d155",
+            "foreground": "#86c0d1"
         },
         {
             "scope": "meta.function-call.command", 
@@ -188,7 +189,7 @@
             "foreground": "#b08fbf"
         },
         {
-            "scope": "meta.variable.other string.quoted.single",
+            "scope": "meta.string.heredoc, meta.variable.other string.quoted.single, meta.script string.quoted.single",
             "name": "Variable Assignment",
             "background": "#b08fbf10",
             "foreground": "#b08fbf"

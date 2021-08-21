@@ -47,6 +47,7 @@ contexts:
         - include: heredoc
         - match: '(?= # | // |$)'
           pop: 1
+        - include: snippet
         - include: script
         - include: dialog
         - match: '(.*?)'
@@ -248,17 +249,28 @@ contexts:
         3: string.quoted.single.value.frontmatter.bunch
 
   heredoc:
-    - match: '(`{3,}|<< *([A-Z]+) *$)'
+    - match: '((`{3,})|<< *([A-Z]+))(?=\s*$)'
       captures:
         1: punctuation.definition.variable.bunch
         2: punctuation.definition.heredoc.bunch
+        3: punctuation.definition.heredoc.bunch
       push:
-        - meta_scope: string.quoted.single.bunch
-        - match: '^[ \t]*(`{3,}|([A-Z]+)) *$'
-          captures:
-            1: punctuation.definition.variable.bunch
-            2: punctuation.definition.heredoc.bunch
-          pop: 1
+        - meta_scope: meta.string.heredoc.bunch
+        - meta_content_scope: string.quoted.single
+        - include: heredoc-fenced-end
+        - include: heredoc-end
+
+  heredoc-fenced-end:
+    - match: ^[ \t]*(\2)(?=\s*$)
+      scope: punctuation.definition.heredoc.bunch
+      pop: 1
+
+  heredoc-end:
+    - match: ^[ \t]*(\3)(?=\s*$)
+      scope: punctuation.definition.variable.bunch
+      captures:
+        1: punctuation.definition.heredoc.bunch
+      pop: 1
 
   placeholder:
     - match: '([\$%]\{)'
@@ -287,11 +299,12 @@ contexts:
       push:
         - meta_scope: meta.script.bunch
         - include: heredoc
+        - include: snippet
         - match: '(?=#|//|\?|$)'
           pop: 1
 
   snippet:
-    - match: (?:\s*)(!!?)?(<)
+    - match: (?:\s*)(!!?)?(<)(?=[^<]|<#)
       captures:
         1: punctuation.definition.negation.bunch
         2: punctuation.definition.generic.begin.bunch

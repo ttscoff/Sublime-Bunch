@@ -1,0 +1,7 @@
+---------
+Bunch.app
+---------
+
+v1.1.8:
+
+- Add highlight support for heredoc syntax

@@ -164,6 +164,11 @@
             "foreground": "#86c0d1"
         },
         {
+            "scope": "punctuation.definition.heredoc.bunch",
+            "font_style": "bold",
+            "foreground": "#00acda99"
+        },
+        {
             "scope": "meta.function-call.command",
             "name": "Command",
             "font_style": "bold",

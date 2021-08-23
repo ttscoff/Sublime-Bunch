@@ -21,6 +21,16 @@
             "font_style": "normal",
             "foreground": "#d8dee9"
         },
+        {   "scope": "invalid.illegal.character",
+            "name": "Invalid Syntax",
+            "background": "#b61d2add",
+            "foreground": "#ffffff"
+        },
+        {   "scope": "invalid.illegal.command",
+            "name": "Unknown Command",
+            "background": "#00000000",
+            "foreground": "#f4a0a7"
+        },
         {
             "scope": "meta.frontmatter",
             "name": "Frontmatter",
@@ -94,6 +104,11 @@
             "font_style": "italic",
             "foreground": "#8ebcbb"
         },
+        {   "scope": "meta.placeholder invalid.illegal.character",
+            "name": "Invalid Syntax",
+            "background": "#b61d2add",
+            "foreground": "#ffffff"
+        },
         {
             "scope": "string.quoted.single.default.bunch",
             "name": "Variable Default Value",
@@ -159,13 +174,14 @@
             "foreground": "#a2bf8a"
         },
         {
-            "scope": "meta.script punctuation.definition.variable",
+            "scope": "punctuation.definition.variable",
             "name": "Script Operator",
             "foreground": "#86c0d1"
         },
         {
             "scope": "punctuation.definition.heredoc.bunch",
-            "font_style": "bold",
+            "font_style": "italic",
+            "background": "#00acda22",
             "foreground": "#00acda99"
         },
         {
@@ -187,7 +203,7 @@
             "foreground": "#b08fbf"
         },
         {
-            "scope": "meta.variable.other string.quoted.single",
+            "scope": "meta.string.heredoc, meta.variable.other string.quoted.single, meta.script string.quoted.single",
             "name": "Variable Assignment",
             "background": "#b08fbf10",
             "foreground": "#b08fbf"

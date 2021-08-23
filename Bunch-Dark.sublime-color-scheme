@@ -21,6 +21,16 @@
             "font_style": "normal",
             "foreground": "#4c566b"
         }, 
+        {   "scope": "invalid.illegal.character",
+            "name": "Invalid Syntax",
+            "background": "#b61d2a88",
+            "foreground": "#f4a0a7"
+        },
+        {   "scope": "invalid.illegal.command",
+            "name": "Unknown Command",
+            "background": "#00000000",
+            "foreground": "#f4a0a7"
+        },
         {
             "scope": "meta.frontmatter", 
             "name": "Frontmatter", 

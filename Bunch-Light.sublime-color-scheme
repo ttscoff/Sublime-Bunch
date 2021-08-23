@@ -21,6 +21,16 @@
             "font_style": "normal",
             "foreground": "#d8dee9"
         },
+        {   "scope": "invalid.illegal.character",
+            "name": "Invalid Syntax",
+            "background": "#b61d2add",
+            "foreground": "#ffffff"
+        },
+        {   "scope": "invalid.illegal.command",
+            "name": "Unknown Command",
+            "background": "#00000000",
+            "foreground": "#f4a0a7"
+        },
         {
             "scope": "meta.frontmatter",
             "name": "Frontmatter",
@@ -93,6 +103,11 @@
             "name": "Variable Transform",
             "font_style": "italic",
             "foreground": "#8ebcbb"
+        },
+        {   "scope": "meta.placeholder invalid.illegal.character",
+            "name": "Invalid Syntax",
+            "background": "#b61d2add",
+            "foreground": "#ffffff"
         },
         {
             "scope": "string.quoted.single.default.bunch",

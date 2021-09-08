@@ -267,12 +267,12 @@ contexts:
         - include: heredoc-end
 
   heredoc-fenced-end:
-    - match: ^[ \t]*(\2)(?=\s*$)
+    - match: ^[ \t]*(\2)( *~\d+)?( *\(display.*?\))?( *~\d+)?(?=\s*$)
       scope: punctuation.definition.heredoc.bunch
       pop: 1
 
   heredoc-end:
-    - match: ^[ \t]*(\3)(?=\s*$)
+    - match: ^[ \t]*(\3)( *~\d+)?( *\(display.*?\))?( *~\d+)?(?=\s*$)
       scope: punctuation.definition.variable.bunch
       captures:
         1: punctuation.definition.heredoc.bunch

@@ -1,0 +1,7 @@
+---------
+Bunch.app
+---------
+
+v1.1.11:
+
+- Add highlight support for shortcut command

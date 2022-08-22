@@ -64,7 +64,7 @@ contexts:
         2: punctuation.section.parens.begin.bunch
       push:
         - meta_scope: meta.function-call.command.bunch
-        - match: '(display|(dark|light) mode( (on|off))?|(do not disturb|dnd)( (on|off))?|dock (left|right|bottom)|(show|hide) (dock|menu bar|desktop)|(dock|desktop)( (hide|show))?|wallpaper|screen|audio (input|output)|audio|notify|sleep|awake|log|input source)\b'
+        - match: '(display|shortcut|sc|(dark|light) mode( (on|off))?|(do not disturb|dnd)( (on|off))?|dock (left|right|bottom)|(show|hide) (dock|menu bar|desktop)|(dock|desktop)( (hide|show))?|wallpaper|screen|audio (input|output)|audio|notify|sleep|awake|log|input source)\b'
           push:
           - meta_scope: support.function.command.bunch
           - match: '[^\)]+'
